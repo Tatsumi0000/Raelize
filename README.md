@@ -1,8 +1,7 @@
-# Vist
+# Raelize
+Raelize is a coined word combining realize(気付く) and aspect(両面) 🫰
 
-Hello, World!
-
-Vist is mac application 💻
+This is mac application 💻
 
 # 🧑‍💻Setup
 
