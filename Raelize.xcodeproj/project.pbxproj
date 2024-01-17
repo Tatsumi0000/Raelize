@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B42CBDF02B581260001A789D /* VistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBDEF2B581260001A789D /* VistApp.swift */; };
+		B42CBDF02B581260001A789D /* RaelizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBDEF2B581260001A789D /* RaelizeApp.swift */; };
 		B42CBDF22B581260001A789D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBDF12B581260001A789D /* ContentView.swift */; };
 		B42CBDF42B581261001A789D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42CBDF32B581261001A789D /* Assets.xcassets */; };
 		B42CBDF72B581261001A789D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42CBDF62B581261001A789D /* Preview Assets.xcassets */; };
-		B42CBE022B581261001A789D /* VistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBE012B581261001A789D /* VistTests.swift */; };
-		B42CBE0C2B581261001A789D /* VistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBE0B2B581261001A789D /* VistUITests.swift */; };
-		B42CBE0E2B581261001A789D /* VistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBE0D2B581261001A789D /* VistUITestsLaunchTests.swift */; };
-		B42CBE332B5819AD001A789D /* VistLogic in Frameworks */ = {isa = PBXBuildFile; productRef = B42CBE322B5819AD001A789D /* VistLogic */; };
-		B42CBE362B581A2B001A789D /* VistLogic in Frameworks */ = {isa = PBXBuildFile; productRef = B42CBE352B581A2B001A789D /* VistLogic */; };
+		B42CBE022B581261001A789D /* RaelizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBE012B581261001A789D /* RaelizeTests.swift */; };
+		B42CBE0C2B581261001A789D /* RaelizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBE0B2B581261001A789D /* RaelizeUITests.swift */; };
+		B42CBE0E2B581261001A789D /* RaelizeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBE0D2B581261001A789D /* RaelizeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +34,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B42CBDEC2B581260001A789D /* Vist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vist.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B42CBDEF2B581260001A789D /* VistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistApp.swift; sourceTree = "<group>"; };
+		B42CBDEC2B581260001A789D /* Raelize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raelize.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42CBDEF2B581260001A789D /* RaelizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeApp.swift; sourceTree = "<group>"; };
 		B42CBDF12B581260001A789D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B42CBDF32B581261001A789D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B42CBDF62B581261001A789D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B42CBDF82B581261001A789D /* Vist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vist.entitlements; sourceTree = "<group>"; };
-		B42CBDFD2B581261001A789D /* VistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B42CBE012B581261001A789D /* VistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistTests.swift; sourceTree = "<group>"; };
-		B42CBE072B581261001A789D /* VistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B42CBE0B2B581261001A789D /* VistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistUITests.swift; sourceTree = "<group>"; };
-		B42CBE0D2B581261001A789D /* VistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B4F303D22B581F4000BB7597 /* VistLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = VistLogic; sourceTree = "<group>"; };
+		B42CBDFD2B581261001A789D /* RaelizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaelizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42CBE012B581261001A789D /* RaelizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeTests.swift; sourceTree = "<group>"; };
+		B42CBE072B581261001A789D /* RaelizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaelizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42CBE0B2B581261001A789D /* RaelizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeUITests.swift; sourceTree = "<group>"; };
+		B42CBE0D2B581261001A789D /* RaelizeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B43910FF2B58303700ED3080 /* RaelizeLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RaelizeLogic; sourceTree = "<group>"; };
 		B4F303D52B58242E00BB7597 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
 		B4F303D62B58265000BB7597 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		B4F303D72B58267900BB7597 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -58,8 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42CBE332B5819AD001A789D /* VistLogic in Frameworks */,
-				B42CBE362B581A2B001A789D /* VistLogic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +83,9 @@
 				B4F303D72B58267900BB7597 /* Debug.xcconfig */,
 				B4F303D52B58242E00BB7597 /* Signing.xcconfig */,
 				B4F303D32B581F8D00BB7597 /* Features */,
-				B42CBDEE2B581260001A789D /* Vist */,
-				B42CBE002B581261001A789D /* VistTests */,
-				B42CBE0A2B581261001A789D /* VistUITests */,
+				B42CBDEE2B581260001A789D /* Raelize */,
+				B42CBE002B581261001A789D /* RaelizeTests */,
+				B42CBE0A2B581261001A789D /* RaelizeUITests */,
 				B42CBDED2B581260001A789D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,14 +93,14 @@
 		B42CBDED2B581260001A789D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B42CBDEC2B581260001A789D /* Vist.app */,
-				B42CBDFD2B581261001A789D /* VistTests.xctest */,
-				B42CBE072B581261001A789D /* VistUITests.xctest */,
+				B42CBDEC2B581260001A789D /* Raelize.app */,
+				B42CBDFD2B581261001A789D /* RaelizeTests.xctest */,
+				B42CBE072B581261001A789D /* RaelizeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B42CBDEE2B581260001A789D /* Vist */ = {
+		B42CBDEE2B581260001A789D /* Raelize */ = {
 			isa = PBXGroup;
 			children = (
 				B4F303D42B58206E00BB7597 /* Sources */,
@@ -112,7 +108,7 @@
 				B42CBDF82B581261001A789D /* Vist.entitlements */,
 				B42CBDF52B581261001A789D /* Preview Content */,
 			);
-			path = Vist;
+			path = Raelize;
 			sourceTree = "<group>";
 		};
 		B42CBDF52B581261001A789D /* Preview Content */ = {
@@ -123,27 +119,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B42CBE002B581261001A789D /* VistTests */ = {
+		B42CBE002B581261001A789D /* RaelizeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B42CBE012B581261001A789D /* VistTests.swift */,
+				B42CBE012B581261001A789D /* RaelizeTests.swift */,
 			);
-			path = VistTests;
+			path = RaelizeTests;
 			sourceTree = "<group>";
 		};
-		B42CBE0A2B581261001A789D /* VistUITests */ = {
+		B42CBE0A2B581261001A789D /* RaelizeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B42CBE0B2B581261001A789D /* VistUITests.swift */,
-				B42CBE0D2B581261001A789D /* VistUITestsLaunchTests.swift */,
+				B42CBE0B2B581261001A789D /* RaelizeUITests.swift */,
+				B42CBE0D2B581261001A789D /* RaelizeUITestsLaunchTests.swift */,
 			);
-			path = VistUITests;
+			path = RaelizeUITests;
 			sourceTree = "<group>";
 		};
 		B4F303D32B581F8D00BB7597 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				B4F303D22B581F4000BB7597 /* VistLogic */,
+				B43910FF2B58303700ED3080 /* RaelizeLogic */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -151,7 +147,7 @@
 		B4F303D42B58206E00BB7597 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B42CBDEF2B581260001A789D /* VistApp.swift */,
+				B42CBDEF2B581260001A789D /* RaelizeApp.swift */,
 				B42CBDF12B581260001A789D /* ContentView.swift */,
 			);
 			path = Sources;
@@ -160,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B42CBDEB2B581260001A789D /* Vist */ = {
+		B42CBDEB2B581260001A789D /* Raelize */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B42CBE112B581261001A789D /* Build configuration list for PBXNativeTarget "Vist" */;
+			buildConfigurationList = B42CBE112B581261001A789D /* Build configuration list for PBXNativeTarget "Raelize" */;
 			buildPhases = (
 				B42CBDE82B581260001A789D /* Sources */,
 				B42CBDE92B581260001A789D /* Frameworks */,
@@ -172,18 +168,16 @@
 			);
 			dependencies = (
 			);
-			name = Vist;
+			name = Raelize;
 			packageProductDependencies = (
-				B42CBE322B5819AD001A789D /* VistLogic */,
-				B42CBE352B581A2B001A789D /* VistLogic */,
 			);
 			productName = Vist;
-			productReference = B42CBDEC2B581260001A789D /* Vist.app */;
+			productReference = B42CBDEC2B581260001A789D /* Raelize.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B42CBDFC2B581261001A789D /* VistTests */ = {
+		B42CBDFC2B581261001A789D /* RaelizeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B42CBE142B581261001A789D /* Build configuration list for PBXNativeTarget "VistTests" */;
+			buildConfigurationList = B42CBE142B581261001A789D /* Build configuration list for PBXNativeTarget "RaelizeTests" */;
 			buildPhases = (
 				B42CBDF92B581261001A789D /* Sources */,
 				B42CBDFA2B581261001A789D /* Frameworks */,
@@ -194,14 +188,14 @@
 			dependencies = (
 				B42CBDFF2B581261001A789D /* PBXTargetDependency */,
 			);
-			name = VistTests;
+			name = RaelizeTests;
 			productName = VistTests;
-			productReference = B42CBDFD2B581261001A789D /* VistTests.xctest */;
+			productReference = B42CBDFD2B581261001A789D /* RaelizeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B42CBE062B581261001A789D /* VistUITests */ = {
+		B42CBE062B581261001A789D /* RaelizeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B42CBE172B581261001A789D /* Build configuration list for PBXNativeTarget "VistUITests" */;
+			buildConfigurationList = B42CBE172B581261001A789D /* Build configuration list for PBXNativeTarget "RaelizeUITests" */;
 			buildPhases = (
 				B42CBE032B581261001A789D /* Sources */,
 				B42CBE042B581261001A789D /* Frameworks */,
@@ -212,9 +206,9 @@
 			dependencies = (
 				B42CBE092B581261001A789D /* PBXTargetDependency */,
 			);
-			name = VistUITests;
+			name = RaelizeUITests;
 			productName = VistUITests;
-			productReference = B42CBE072B581261001A789D /* VistUITests.xctest */;
+			productReference = B42CBE072B581261001A789D /* RaelizeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -240,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B42CBDE72B581260001A789D /* Build configuration list for PBXProject "Vist" */;
+			buildConfigurationList = B42CBDE72B581260001A789D /* Build configuration list for PBXProject "Raelize" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -255,9 +249,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B42CBDEB2B581260001A789D /* Vist */,
-				B42CBDFC2B581261001A789D /* VistTests */,
-				B42CBE062B581261001A789D /* VistUITests */,
+				B42CBDEB2B581260001A789D /* Raelize */,
+				B42CBDFC2B581261001A789D /* RaelizeTests */,
+				B42CBE062B581261001A789D /* RaelizeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,7 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42CBDF22B581260001A789D /* ContentView.swift in Sources */,
-				B42CBDF02B581260001A789D /* VistApp.swift in Sources */,
+				B42CBDF02B581260001A789D /* RaelizeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42CBE022B581261001A789D /* VistTests.swift in Sources */,
+				B42CBE022B581261001A789D /* RaelizeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42CBE0E2B581261001A789D /* VistUITestsLaunchTests.swift in Sources */,
-				B42CBE0C2B581261001A789D /* VistUITests.swift in Sources */,
+				B42CBE0E2B581261001A789D /* RaelizeUITestsLaunchTests.swift in Sources */,
+				B42CBE0C2B581261001A789D /* RaelizeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +314,12 @@
 /* Begin PBXTargetDependency section */
 		B42CBDFF2B581261001A789D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B42CBDEB2B581260001A789D /* Vist */;
+			target = B42CBDEB2B581260001A789D /* Raelize */;
 			targetProxy = B42CBDFE2B581261001A789D /* PBXContainerItemProxy */;
 		};
 		B42CBE092B581261001A789D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B42CBDEB2B581260001A789D /* Vist */;
+			target = B42CBDEB2B581260001A789D /* Raelize */;
 			targetProxy = B42CBE082B581261001A789D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -457,7 +451,7 @@
 				CODE_SIGN_ENTITLEMENTS = Vist/Vist.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Vist/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Raelize/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -467,7 +461,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = example.Vist;
+				PRODUCT_BUNDLE_IDENTIFIER = example.Raelize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -482,7 +476,7 @@
 				CODE_SIGN_ENTITLEMENTS = Vist/Vist.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Vist/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Raelize/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -492,7 +486,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = example.Vist;
+				PRODUCT_BUNDLE_IDENTIFIER = example.Raelize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +560,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B42CBDE72B581260001A789D /* Build configuration list for PBXProject "Vist" */ = {
+		B42CBDE72B581260001A789D /* Build configuration list for PBXProject "Raelize" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B42CBE0F2B581261001A789D /* Debug */,
@@ -575,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B42CBE112B581261001A789D /* Build configuration list for PBXNativeTarget "Vist" */ = {
+		B42CBE112B581261001A789D /* Build configuration list for PBXNativeTarget "Raelize" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B42CBE122B581261001A789D /* Debug */,
@@ -584,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B42CBE142B581261001A789D /* Build configuration list for PBXNativeTarget "VistTests" */ = {
+		B42CBE142B581261001A789D /* Build configuration list for PBXNativeTarget "RaelizeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B42CBE152B581261001A789D /* Debug */,
@@ -593,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B42CBE172B581261001A789D /* Build configuration list for PBXNativeTarget "VistUITests" */ = {
+		B42CBE172B581261001A789D /* Build configuration list for PBXNativeTarget "RaelizeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B42CBE182B581261001A789D /* Debug */,
@@ -603,17 +597,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B42CBE322B5819AD001A789D /* VistLogic */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = VistLogic;
-		};
-		B42CBE352B581A2B001A789D /* VistLogic */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = VistLogic;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B42CBDE42B581260001A789D /* Project object */;
 }

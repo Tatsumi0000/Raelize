@@ -1,7 +1,7 @@
 
 import XCTest
 
-final class VistUITestsLaunchTests: XCTestCase {
+final class RaelizeUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

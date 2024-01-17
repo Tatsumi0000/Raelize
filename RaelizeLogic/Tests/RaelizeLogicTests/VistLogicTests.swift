@@ -1,7 +1,7 @@
 import XCTest
-@testable import VistLogic
+@testable import RaelizeLogic
 
-final class VistLogicTests: XCTestCase {
+final class RaelizeLogicTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
