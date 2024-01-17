@@ -1,5 +1,5 @@
 # Raelize
-Raelize is a coined word combining realize(気付く) and aspect(両面) 🫰
+Raelize is a coined word combining realize(気付く), æ, and aspect(両面) 🫰
 
 This is mac application 💻
 
