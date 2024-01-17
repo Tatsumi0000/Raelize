@@ -39,7 +39,7 @@
 		B42CBDF12B581260001A789D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B42CBDF32B581261001A789D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B42CBDF62B581261001A789D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B42CBDF82B581261001A789D /* Vist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vist.entitlements; sourceTree = "<group>"; };
+		B42CBDF82B581261001A789D /* Raelize.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Raelize.entitlements; sourceTree = "<group>"; };
 		B42CBDFD2B581261001A789D /* RaelizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaelizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42CBE012B581261001A789D /* RaelizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeTests.swift; sourceTree = "<group>"; };
 		B42CBE072B581261001A789D /* RaelizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaelizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +105,7 @@
 			children = (
 				B4F303D42B58206E00BB7597 /* Sources */,
 				B42CBDF32B581261001A789D /* Assets.xcassets */,
-				B42CBDF82B581261001A789D /* Vist.entitlements */,
+				B42CBDF82B581261001A789D /* Raelize.entitlements */,
 				B42CBDF52B581261001A789D /* Preview Content */,
 			);
 			path = Raelize;
@@ -448,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Vist/Vist.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Raelize/Raelize.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Raelize/Preview Content\"";
@@ -473,7 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Vist/Vist.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Raelize/Raelize.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Raelize/Preview Content\"";
