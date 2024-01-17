@@ -1,10 +1,3 @@
-//
-//  VistUITests.swift
-//  Vist
-//
-//  Created by Tatsumi0000 on 2024/01/17.
-//  
-//
 
 import XCTest
 
