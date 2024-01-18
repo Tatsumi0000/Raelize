@@ -15,8 +15,8 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/ggerganov/llama.cpp",
-            revision: "b1892"
-        ), // 2024-01-19 latest version
+            revision: "b1892" // 2024-01-19 latest version
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
