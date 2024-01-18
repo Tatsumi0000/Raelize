@@ -1,5 +1,5 @@
-import XCTest
 @testable import RaelizeLogic
+import XCTest
 
 final class RaelizeLogicTests: XCTestCase {
     func testExample() throws {

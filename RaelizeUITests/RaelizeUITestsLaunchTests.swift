@@ -2,7 +2,6 @@
 import XCTest
 
 final class RaelizeUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

@@ -9,12 +9,14 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "RaelizeLogic",
-            targets: ["RaelizeLogic"]),
+            targets: ["RaelizeLogic"]
+        ),
     ],
     dependencies: [
         .package(
-                    url: "https://github.com/ggerganov/llama.cpp",
-                    revision: "b1892"), // 2024-01-19 latest version
+            url: "https://github.com/ggerganov/llama.cpp",
+            revision: "b1892"
+        ), // 2024-01-19 latest version
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -22,11 +24,13 @@ let package = Package(
         .target(
             name: "RaelizeLogic",
             dependencies: [
-                .product(name: "llama", package: "llama.cpp")
+                .product(name: "llama", package: "llama.cpp"),
             ],
-            path: "./Sources"),
+            path: "./Sources"
+        ),
         .testTarget(
             name: "RaelizeLogicTests",
-            dependencies: ["RaelizeLogic"]),
+            dependencies: ["RaelizeLogic"]
+        ),
     ]
 )
