@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D9CF0B02BA6BA2B00268296 /* RaelizeInputMethodKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RaelizeInputMethodKit; sourceTree = "<group>"; };
 		B42CBDEC2B581260001A789D /* Raelize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raelize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42CBDEF2B581260001A789D /* RaelizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeApp.swift; sourceTree = "<group>"; };
 		B42CBDF12B581260001A789D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		B4F303D32B581F8D00BB7597 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0D9CF0B02BA6BA2B00268296 /* RaelizeInputMethodKit */,
 				B43910FF2B58303700ED3080 /* RaelizeLogic */,
 			);
 			name = Features;
