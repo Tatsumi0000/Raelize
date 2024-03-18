@@ -6,23 +6,29 @@ import InputMethodKit
 
 @objc(RaelizeIMKController)
 public class RaelizeIMKController: IMKInputController {
+    
+    private let candidates: IMKCandidates
+    
+    public override init!(server: IMKServer!, delegate: Any!, client inputClient: Any!) {
+        self.candidates = IMKCandidates(server: server, panelType: kIMKSingleColumnScrollingCandidatePanel)
+        super.init(server: server, delegate: delegate, client: inputClient)
+    }
 
     public override func inputText(_ string: String!, client sender: Any!) -> Bool {
+        NSLog(string)
+        guard let client = sender as? IMKTextInput else {
+            return false
+        }
+        
+        self.candidates.update()
+        self.candidates.show()
+    
+        client.insertText(string, replacementRange: NSRange(location: NSNotFound, length: NSNotFound))
         return true
     }
-
-    /// Candidate selection has been moved.
-    /// - Parameter candidateString: <#candidateString description#>
-    public override func candidateSelectionChanged(_ candidateString: NSAttributedString!) {
-        print("---candidateSelectionChanged---")
-        print(candidateString)
-    }
-
-    /// Candidate selection has been selected.
-    /// - Parameter candidateString: <#candidateString description#>
-    public override func candidateSelected(_ candidateString: NSAttributedString!) {
-        print("---candidateSelected---")
-        print(candidateString)
+    
+    public override func candidates(_ sender: Any!) -> [Any]! {
+          return ["TEST0", "TEST1", "TEST2"]
     }
 
 }
