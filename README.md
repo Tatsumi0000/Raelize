@@ -16,3 +16,10 @@ git clone https://github.com/Tatsumi0000/Raelize.git
 ```xconfig
 cp example-Signing.xcconfig Signing.xcconfig
 ```
+
+3. Formatter settings.
+
+```sh
+git config core.hooksPath .githooks
+chmod +x .githooks/pre-commit
+```
