@@ -2,7 +2,8 @@
 
 STAGED_FILES=$(git diff --diff-filter=d --staged --name-only)
 
-echo "$STAGED_FILES" | grep -e '\\(.*\\).swift$' | while read -r file; do
+echo "$STAGED_FILES" | grep -e '.swift$' | while read -r file; do
+  echo "Formatting ${file}"
   swift-format "${file}" -i
   git add "${file}"
 done
