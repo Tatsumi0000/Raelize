@@ -20,6 +20,6 @@ cp example-Signing.xcconfig Signing.xcconfig
 3. Formatter settings.
 
 ```sh
-git config core.hooksPath .githooks
+git config --local core.hooksPath .githooks
 chmod +x .githooks/pre-commit
 ```
