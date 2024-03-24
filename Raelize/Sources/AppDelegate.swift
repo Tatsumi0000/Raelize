@@ -11,7 +11,7 @@ import InputMethodKit
 import RaelizeInputMethodKit
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-     var server = IMKServer()
+    var server = IMKServer()
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         server = IMKServer(
