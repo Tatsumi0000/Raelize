@@ -1,3 +1,3 @@
 [submodule "word-list"]
-	path = WordList
+	path = word-list
 	url = git@github.com:Tatsumi0000/words.git
