@@ -6,7 +6,7 @@
     "spaces" : 4
   },
   "indentConditionalCompilationBlocks" : true,
-  "indentSwitchCaseLabels" : false,
+  "indentSwitchCaseLabels" : true,
   "lineBreakAroundMultilineExpressionChainComponents" : true,
   "lineBreakBeforeControlFlowKeywords" : false,
   "lineBreakBeforeEachArgument" : false,
