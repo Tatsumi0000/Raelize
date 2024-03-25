@@ -5,8 +5,8 @@
 //
 //
 
-import Foundation
 import Combine
+import Foundation
 
 protocol WordListFileRepositoryType {
     /// Read file. And, set word-list to wordListInFile.
@@ -22,22 +22,26 @@ final class WordListFileRepository: WordListFileRepositoryType {
     /// Current opened file content.
     private let wordListInFile = CurrentValueSubject<[String]?, Never>(nil)
 
-     func readFile(fileName: String) {
-        guard let fileUrl = Bundle.module.url(forResource: "WordList/" + fileName, withExtension: "tsv"),
-              let data = try? String(contentsOf: fileUrl) else {
+    func readFile(fileName: String) {
+        guard
+            let fileUrl = Bundle.module.url(
+                forResource: "WordList/" + fileName, withExtension: "tsv"),
+            let data = try? String(contentsOf: fileUrl)
+        else {
             self.wordListInFile.send(nil)
-                  return
-              }
+            return
+        }
         self.wordListInFile.send(data.components(separatedBy: .newlines))
     }
-    
+
     func getWordList() -> AnyPublisher<[String]?, Never> {
         return Future { result in
             result(.success(self.wordListInFile.value))
-        }.eraseToAnyPublisher()
+        }
+        .eraseToAnyPublisher()
     }
-    
-     func resetFile() {
+
+    func resetFile() {
         self.wordListInFile.send(nil)
     }
 }
