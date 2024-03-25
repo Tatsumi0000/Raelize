@@ -11,7 +11,7 @@ public protocol UseCaseProviderType {
     var wordListFileUseCase: WordListFileUseCaseType { get }
 }
 
-public class UseCaseProvider: UseCaseProviderType {
+final public class UseCaseProvider: UseCaseProviderType {
 
     private init() {}
     public static let shared: UseCaseProviderType = UseCaseProvider()

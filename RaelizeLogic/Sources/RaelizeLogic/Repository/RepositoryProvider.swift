@@ -11,7 +11,7 @@ protocol RepositoryProviderType {
     var wordListFileRepository: WordListFileRepositoryType { get }
 }
 
-class RepositoryProvider: RepositoryProviderType {
+final class RepositoryProvider: RepositoryProviderType {
 
     private init() {}
     static let shared: RepositoryProviderType = RepositoryProvider()
