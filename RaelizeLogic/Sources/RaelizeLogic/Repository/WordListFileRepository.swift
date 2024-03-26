@@ -31,7 +31,8 @@ final class WordListFileRepository: WordListFileRepositoryType {
             self.wordListInFile.send(nil)
             return
         }
-        self.wordListInFile.send(data.components(separatedBy: .newlines))
+        let splittedData = data.components(separatedBy: .newlines).filter( {!$0.isEmpty} )
+        self.wordListInFile.send(splittedData)
     }
 
     func getWordList() -> AnyPublisher<[String]?, Never> {
