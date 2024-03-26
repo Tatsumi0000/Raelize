@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0C0CD52BB2C13900FEB7FD /* RaelizeDebugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0CD42BB2C13900FEB7FD /* RaelizeDebugApp.swift */; };
+		0D0C0CD72BB2C13900FEB7FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0CD62BB2C13900FEB7FD /* ContentView.swift */; };
+		0D0C0CD92BB2C13A00FEB7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0C0CD82BB2C13A00FEB7FD /* Assets.xcassets */; };
+		0D0C0CDC2BB2C13A00FEB7FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0C0CDB2BB2C13A00FEB7FD /* Preview Assets.xcassets */; };
 		0D28258C2BA73365006EA2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28258B2BA73365006EA2F6 /* AppDelegate.swift */; };
 		0D28258F2BA73848006EA2F6 /* RaelizeInputMethodKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0D28258E2BA73848006EA2F6 /* RaelizeInputMethodKit */; };
 		0D2825912BA7384C006EA2F6 /* RaelizeLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 0D2825902BA7384C006EA2F6 /* RaelizeLogic */; };
@@ -37,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0C0CD22BB2C13900FEB7FD /* RaelizeDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaelizeDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D0C0CD42BB2C13900FEB7FD /* RaelizeDebugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeDebugApp.swift; sourceTree = "<group>"; };
+		0D0C0CD62BB2C13900FEB7FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0D0C0CD82BB2C13A00FEB7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D0C0CDB2BB2C13A00FEB7FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0D0C0CDD2BB2C13A00FEB7FD /* RaelizeDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaelizeDebug.entitlements; sourceTree = "<group>"; };
 		0D28258A2BA72D31006EA2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0D28258B2BA73365006EA2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D9CF0B02BA6BA2B00268296 /* RaelizeInputMethodKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RaelizeInputMethodKit; sourceTree = "<group>"; };
@@ -58,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D0C0CCF2BB2C13900FEB7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B42CBDE92B581260001A789D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,6 +101,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0C0CD32BB2C13900FEB7FD /* RaelizeDebug */ = {
+			isa = PBXGroup;
+			children = (
+				0D0C0CD42BB2C13900FEB7FD /* RaelizeDebugApp.swift */,
+				0D0C0CD62BB2C13900FEB7FD /* ContentView.swift */,
+				0D0C0CD82BB2C13A00FEB7FD /* Assets.xcassets */,
+				0D0C0CDD2BB2C13A00FEB7FD /* RaelizeDebug.entitlements */,
+				0D0C0CDA2BB2C13A00FEB7FD /* Preview Content */,
+			);
+			path = RaelizeDebug;
+			sourceTree = "<group>";
+		};
+		0D0C0CDA2BB2C13A00FEB7FD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0D0C0CDB2BB2C13A00FEB7FD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		0D28258D2BA73848006EA2F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +138,7 @@
 				B42CBDEE2B581260001A789D /* Raelize */,
 				B42CBE002B581261001A789D /* RaelizeTests */,
 				B42CBE0A2B581261001A789D /* RaelizeUITests */,
+				0D0C0CD32BB2C13900FEB7FD /* RaelizeDebug */,
 				B42CBDED2B581260001A789D /* Products */,
 				0D28258D2BA73848006EA2F6 /* Frameworks */,
 			);
@@ -112,6 +150,7 @@
 				B42CBDEC2B581260001A789D /* Raelize.app */,
 				B42CBDFD2B581261001A789D /* RaelizeTests.xctest */,
 				B42CBE072B581261001A789D /* RaelizeUITests.xctest */,
+				0D0C0CD22BB2C13900FEB7FD /* RaelizeDebug.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +214,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0D0C0CD12BB2C13900FEB7FD /* RaelizeDebug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D0C0CE02BB2C13A00FEB7FD /* Build configuration list for PBXNativeTarget "RaelizeDebug" */;
+			buildPhases = (
+				0D0C0CCE2BB2C13900FEB7FD /* Sources */,
+				0D0C0CCF2BB2C13900FEB7FD /* Frameworks */,
+				0D0C0CD02BB2C13900FEB7FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RaelizeDebug;
+			productName = RaelizeDebug;
+			productReference = 0D0C0CD22BB2C13900FEB7FD /* RaelizeDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B42CBDEB2B581260001A789D /* Raelize */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B42CBE112B581261001A789D /* Build configuration list for PBXNativeTarget "Raelize" */;
@@ -239,9 +295,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					0D0C0CD12BB2C13900FEB7FD = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					B42CBDEB2B581260001A789D = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -273,11 +332,21 @@
 				B42CBDEB2B581260001A789D /* Raelize */,
 				B42CBDFC2B581261001A789D /* RaelizeTests */,
 				B42CBE062B581261001A789D /* RaelizeUITests */,
+				0D0C0CD12BB2C13900FEB7FD /* RaelizeDebug */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0D0C0CD02BB2C13900FEB7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D0C0CDC2BB2C13A00FEB7FD /* Preview Assets.xcassets in Resources */,
+				0D0C0CD92BB2C13A00FEB7FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B42CBDEA2B581260001A789D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,6 +373,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0D0C0CCE2BB2C13900FEB7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D0C0CD72BB2C13900FEB7FD /* ContentView.swift in Sources */,
+				0D0C0CD52BB2C13900FEB7FD /* RaelizeDebugApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B42CBDE82B581260001A789D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +425,58 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0D0C0CDE2BB2C13A00FEB7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaelizeDebug/RaelizeDebug.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RaelizeDebug/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = love.aespa.RaelizeDebug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0D0C0CDF2BB2C13A00FEB7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaelizeDebug/RaelizeDebug.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RaelizeDebug/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = love.aespa.RaelizeDebug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		B42CBE0F2B581261001A789D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -584,6 +714,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D0C0CE02BB2C13A00FEB7FD /* Build configuration list for PBXNativeTarget "RaelizeDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D0C0CDE2BB2C13A00FEB7FD /* Debug */,
+				0D0C0CDF2BB2C13A00FEB7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B42CBDE72B581260001A789D /* Build configuration list for PBXProject "Raelize" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
