@@ -31,7 +31,7 @@ final class WordListFileRepository: WordListFileRepositoryType {
             self.wordListInFile.send(nil)
             return
         }
-        let splittedData = data.components(separatedBy: .newlines).filter( {!$0.isEmpty} )
+        let splittedData = data.components(separatedBy: .newlines).filter({ !$0.isEmpty })
         self.wordListInFile.send(splittedData)
     }
 

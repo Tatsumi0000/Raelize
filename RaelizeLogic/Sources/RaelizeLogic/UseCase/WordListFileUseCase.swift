@@ -31,7 +31,7 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
         self.provider = provider
         self.candidatesSize = candidatesSize
     }
-    
+
     public func readFile(fileName: String) {
         self.provider.wordListFileRepository.readFile(fileName: fileName)
     }
