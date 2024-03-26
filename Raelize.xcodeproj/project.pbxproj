@@ -104,8 +104,8 @@
 		0D0C0CD32BB2C13900FEB7FD /* RaelizeDebug */ = {
 			isa = PBXGroup;
 			children = (
-				0D0C0CD42BB2C13900FEB7FD /* RaelizeDebugApp.swift */,
 				0D0C0CD62BB2C13900FEB7FD /* ContentView.swift */,
+				0D0C0CD42BB2C13900FEB7FD /* RaelizeDebugApp.swift */,
 				0D0C0CD82BB2C13A00FEB7FD /* Assets.xcassets */,
 				0D0C0CDD2BB2C13A00FEB7FD /* RaelizeDebug.entitlements */,
 				0D0C0CDA2BB2C13A00FEB7FD /* Preview Content */,
