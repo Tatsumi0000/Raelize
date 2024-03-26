@@ -9,15 +9,19 @@ import Combine
 import Foundation
 
 public protocol WordListFileUseCaseType {
+    /// Want to display word-list
     var currentWordList: CurrentValueSubject<[String]?, Never> { get }
+    /// Get current word-list
+    /// - Returns: word-list
     func getWordList() -> [String]?
+    /// Delete word-list to display
     func resetWordList()
+    /// Preparing data for search
     func searchWordList(word: String)
 }
 
 final public class WordListFileUseCase: WordListFileUseCaseType {
 
-    /// Want to display word-list
     public let currentWordList = CurrentValueSubject<[String]?, Never>(nil)
     /// Shared repository instance
     private let provider: RepositoryProviderType
@@ -30,13 +34,10 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
         self.candidatesSize = candidatesSize
     }
 
-    /// Get current word-list
-    /// - Returns: word-list
     public func getWordList() -> [String]? {
         return self.currentWordList.value
     }
 
-    /// Delete word-list to display
     public func resetWordList() {
         self.currentWordList.value = nil
         self.provider.wordListFileRepository.resetFile()
@@ -60,7 +61,7 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
 
 extension WordListFileUseCaseType {
 
-    /// Binary seach
+    /// Binary search of wordList
     /// - Parameters:
     ///   - word: Search word
     ///   - candidatesSize: Candinates size
@@ -83,6 +84,5 @@ extension WordListFileUseCaseType {
             }
         }
         return nil
-
     }
 }
