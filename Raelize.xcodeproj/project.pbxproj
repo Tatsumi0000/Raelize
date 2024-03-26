@@ -14,6 +14,7 @@
 		0D2825912BA7384C006EA2F6 /* RaelizeLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 0D2825902BA7384C006EA2F6 /* RaelizeLogic */; };
 		0D8440DD2BB2F50F00EF9E85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8440DC2BB2F50F00EF9E85 /* ContentView.swift */; };
 		0D8440DF2BB2F53100EF9E85 /* RaelizeDebugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8440DE2BB2F53100EF9E85 /* RaelizeDebugApp.swift */; };
+		0D8440E12BB2F58B00EF9E85 /* RaelizeLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 0D8440E02BB2F58B00EF9E85 /* RaelizeLogic */; };
 		B42CBDF02B581260001A789D /* RaelizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBDEF2B581260001A789D /* RaelizeApp.swift */; };
 		B42CBDF22B581260001A789D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBDF12B581260001A789D /* ContentView.swift */; };
 		B42CBDF42B581261001A789D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42CBDF32B581261001A789D /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8440E12BB2F58B00EF9E85 /* RaelizeLogic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +237,9 @@
 			dependencies = (
 			);
 			name = RaelizeDebug;
+			packageProductDependencies = (
+				0D8440E02BB2F58B00EF9E85 /* RaelizeLogic */,
+			);
 			productName = RaelizeDebug;
 			productReference = 0D0C0CD22BB2C13900FEB7FD /* RaelizeDebug.app */;
 			productType = "com.apple.product-type.application";
@@ -304,7 +309,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					0D0C0CD12BB2C13900FEB7FD = {
 						CreatedOnToolsVersion = 15.3;
@@ -441,9 +446,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RaelizeDebug/RaelizeDebug.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RaelizeDebug/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -469,9 +475,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RaelizeDebug/RaelizeDebug.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RaelizeDebug/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -523,6 +530,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -586,6 +594,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -613,8 +622,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Raelize/Raelize.entitlements;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Raelize/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -625,6 +636,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = love.aespa.inputmethod.Raelize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -639,8 +651,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Raelize/Raelize.entitlements;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Raelize/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -651,6 +665,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = love.aespa.inputmethod.Raelize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -665,6 +680,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
@@ -682,6 +698,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
@@ -698,6 +715,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = example.VistUITests;
@@ -713,6 +731,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = example.VistUITests;
@@ -779,6 +798,10 @@
 			productName = RaelizeInputMethodKit;
 		};
 		0D2825902BA7384C006EA2F6 /* RaelizeLogic */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RaelizeLogic;
+		};
+		0D8440E02BB2F58B00EF9E85 /* RaelizeLogic */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RaelizeLogic;
 		};
