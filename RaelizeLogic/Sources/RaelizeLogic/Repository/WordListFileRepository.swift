@@ -25,7 +25,7 @@ final class WordListFileRepository: WordListFileRepositoryType {
     func readFile(fileName: String) {
         guard
             let fileUrl = Bundle.module.url(
-                forResource: "WordList/" + fileName, withExtension: "tsv"),
+                forResource: "Resources/dicts/" + fileName, withExtension: "tsv"),
             let data = try? String(contentsOf: fileUrl)
         else {
             self.wordListInFile.send(nil)
