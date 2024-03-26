@@ -23,3 +23,19 @@ cp example-Signing.xcconfig Signing.xcconfig
 git config --local core.hooksPath .githooks
 chmod +x .githooks/pre-commit
 ```
+
+# 📗Modules
+Raelize is a multi-module configuration using Swift Package Manager. Each module is described below.
+
+## Raelize
+Main app.
+
+## RaelizeDebug
+IMEKit is difficult to verify, so we use SwiftUI's TextField to reproduce it. 
+
+## RaelizeLogic
+WordList and word search algorithm (binary search).
+
+## RaelizeInputMethodKit
+IMEKit module.
+
