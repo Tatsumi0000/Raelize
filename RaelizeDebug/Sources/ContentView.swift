@@ -9,6 +9,8 @@ import SwiftUI
 import RaelizeLogic
 import Combine
 
+private var cancellables: Set<AnyCancellable> = []
+
 struct ContentView: View {
     @State var inputText = ""
     
@@ -18,11 +20,13 @@ struct ContentView: View {
         }.onAppear(perform: {
             UseCaseProvider.shared.wordListFileUseCase.readFile(fileName: "a")
             
-            let cancellables =  UseCaseProvider.shared.wordListFileUseCase.currentWordList
-                .sink(receiveValue: {
-                    print("------sink------")
-                    print($0)
-                })
+             UseCaseProvider.shared.wordListFileUseCase.currentWordList
+                .compactMap({ $0 })
+               .sink(receiveValue: {
+                   print("------sink------")
+                   print($0)
+               })
+               .store(in: &cancellables)
         })
         .padding()
         Button("Button", action: {
