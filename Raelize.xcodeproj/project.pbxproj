@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D0C0CD52BB2C13900FEB7FD /* RaelizeDebugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0CD42BB2C13900FEB7FD /* RaelizeDebugApp.swift */; };
-		0D0C0CD72BB2C13900FEB7FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0C0CD62BB2C13900FEB7FD /* ContentView.swift */; };
 		0D0C0CD92BB2C13A00FEB7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0C0CD82BB2C13A00FEB7FD /* Assets.xcassets */; };
 		0D0C0CDC2BB2C13A00FEB7FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0C0CDB2BB2C13A00FEB7FD /* Preview Assets.xcassets */; };
 		0D28258C2BA73365006EA2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28258B2BA73365006EA2F6 /* AppDelegate.swift */; };
 		0D28258F2BA73848006EA2F6 /* RaelizeInputMethodKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0D28258E2BA73848006EA2F6 /* RaelizeInputMethodKit */; };
 		0D2825912BA7384C006EA2F6 /* RaelizeLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 0D2825902BA7384C006EA2F6 /* RaelizeLogic */; };
+		0D8440DD2BB2F50F00EF9E85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8440DC2BB2F50F00EF9E85 /* ContentView.swift */; };
+		0D8440DF2BB2F53100EF9E85 /* RaelizeDebugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8440DE2BB2F53100EF9E85 /* RaelizeDebugApp.swift */; };
 		B42CBDF02B581260001A789D /* RaelizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBDEF2B581260001A789D /* RaelizeApp.swift */; };
 		B42CBDF22B581260001A789D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBDF12B581260001A789D /* ContentView.swift */; };
 		B42CBDF42B581261001A789D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42CBDF32B581261001A789D /* Assets.xcassets */; };
@@ -42,13 +42,13 @@
 
 /* Begin PBXFileReference section */
 		0D0C0CD22BB2C13900FEB7FD /* RaelizeDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaelizeDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D0C0CD42BB2C13900FEB7FD /* RaelizeDebugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeDebugApp.swift; sourceTree = "<group>"; };
-		0D0C0CD62BB2C13900FEB7FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0D0C0CD82BB2C13A00FEB7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D0C0CDB2BB2C13A00FEB7FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0D0C0CDD2BB2C13A00FEB7FD /* RaelizeDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaelizeDebug.entitlements; sourceTree = "<group>"; };
 		0D28258A2BA72D31006EA2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0D28258B2BA73365006EA2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D8440DC2BB2F50F00EF9E85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0D8440DE2BB2F53100EF9E85 /* RaelizeDebugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeDebugApp.swift; sourceTree = "<group>"; };
 		0D9CF0B02BA6BA2B00268296 /* RaelizeInputMethodKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RaelizeInputMethodKit; sourceTree = "<group>"; };
 		B42CBDEC2B581260001A789D /* Raelize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raelize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42CBDEF2B581260001A789D /* RaelizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeApp.swift; sourceTree = "<group>"; };
@@ -104,8 +104,7 @@
 		0D0C0CD32BB2C13900FEB7FD /* RaelizeDebug */ = {
 			isa = PBXGroup;
 			children = (
-				0D0C0CD62BB2C13900FEB7FD /* ContentView.swift */,
-				0D0C0CD42BB2C13900FEB7FD /* RaelizeDebugApp.swift */,
+				0D8440DB2BB2F47B00EF9E85 /* Sources */,
 				0D0C0CD82BB2C13A00FEB7FD /* Assets.xcassets */,
 				0D0C0CDD2BB2C13A00FEB7FD /* RaelizeDebug.entitlements */,
 				0D0C0CDA2BB2C13A00FEB7FD /* Preview Content */,
@@ -126,6 +125,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D8440DB2BB2F47B00EF9E85 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0D8440DC2BB2F50F00EF9E85 /* ContentView.swift */,
+				0D8440DE2BB2F53100EF9E85 /* RaelizeDebugApp.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		B42CBDE32B581260001A789D = {
@@ -300,6 +308,7 @@
 				TargetAttributes = {
 					0D0C0CD12BB2C13900FEB7FD = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 					B42CBDEB2B581260001A789D = {
 						CreatedOnToolsVersion = 15.1;
@@ -377,8 +386,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D0C0CD72BB2C13900FEB7FD /* ContentView.swift in Sources */,
-				0D0C0CD52BB2C13900FEB7FD /* RaelizeDebugApp.swift in Sources */,
+				0D8440DF2BB2F53100EF9E85 /* RaelizeDebugApp.swift in Sources */,
+				0D8440DD2BB2F50F00EF9E85 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RaelizeDebug/RaelizeDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -447,6 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = love.aespa.RaelizeDebug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -456,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RaelizeDebug/RaelizeDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
