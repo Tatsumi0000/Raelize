@@ -11,9 +11,7 @@ import Foundation
 public protocol WordListFileUseCaseType {
     /// Want to display word-list
     var currentWordList: CurrentValueSubject<[String]?, Never> { get }
-    /// Get current word-list
-    /// - Returns: word-list
-    func getWordList() -> [String]?
+    func readFile(fileName: String)
     /// Delete word-list to display
     func resetWordList()
     /// Preparing data for search
@@ -33,9 +31,9 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
         self.provider = provider
         self.candidatesSize = candidatesSize
     }
-
-    public func getWordList() -> [String]? {
-        return self.currentWordList.value
+    
+    public func readFile(fileName: String) {
+        self.provider.wordListFileRepository.readFile(fileName: fileName)
     }
 
     public func resetWordList() {
@@ -54,7 +52,9 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
                     word: word, candidatesSize: self.candidatesSize, wordList: dicts)
                 return candinates
             })
-            .sink(receiveValue: { self.currentWordList.send($0) })
+            .sink(receiveValue: {
+                self.currentWordList.send($0)
+            })
             .store(in: &cancellables)
     }
 }
@@ -73,7 +73,7 @@ extension WordListFileUseCaseType {
         while left <= right {
             let middle = (left + right) / 2
 
-            if wordList[middle].hasPrefix(word) {
+            if wordList[middle].lowercased().hasPrefix(word) {
                 var lastIndex = middle + candidatesSize
                 lastIndex = wordList.count - 1 > lastIndex ? lastIndex : middle  // check out of range
                 return Array(wordList[middle...lastIndex])
