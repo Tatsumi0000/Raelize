@@ -1,13 +1,12 @@
-import XCTest
+import Testing
 
 @testable import RaelizeLogic
 
-final class RaelizeLogicTests: XCTestCase {
-    func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
+struct RaelizeLogicTests {
 
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
-    }
+    private let someBoolValue = true
+    
+  @Test func boolの値がtrueであること() {
+      #expect(self.someBoolValue == true)
+  }
 }
