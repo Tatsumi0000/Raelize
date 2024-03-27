@@ -15,7 +15,9 @@ let package = Package(
             targets: ["RaelizeLogic"]
         )
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-testing.git", from: "0.6.0")
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
@@ -24,7 +26,10 @@ let package = Package(
             resources: [.copy("Resources")]),
         .testTarget(
             name: "RaelizeLogicTests",
-            dependencies: ["RaelizeLogic"]
+            dependencies: [
+                "RaelizeLogic",
+                .product(name: "Testing", package: "swift-testing")
+            ]
         ),
     ]
 )

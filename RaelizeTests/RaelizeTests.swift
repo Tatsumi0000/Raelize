@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import Vist
+@testable import Raelize
 
 final class RaelizeTests: XCTestCase {
     override func setUpWithError() throws {
