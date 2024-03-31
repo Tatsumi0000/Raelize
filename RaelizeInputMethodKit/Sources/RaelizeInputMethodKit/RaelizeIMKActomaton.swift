@@ -8,38 +8,40 @@
 import Foundation
 import AppKit
 import Combine
+import Actomaton
 
-public final class RaelizeIMKReactor {
+public final class RaelizeIMKActomaton {
     
     /// User action
     enum Action {
         /// Operation keys(Enter, Arrow and so on)
         case operationEventKey(NSEvent.SpecialKey)
-        /// Type word
+        /// Typing word
         case inputWord(String?)
     }
     
     /// Change State
     enum Mutation {
-        case setIsInputing(Bool)
         case setIsCandidatesShowing(Bool)
         case setCandinates([String]?)
         case setInputWord(String?)
+        case setSlectedWord(String)
       }
     
     /// UI state
     struct State {
-        var isInputing: Bool = false
         var isCandidatesShowing: Bool = false
         var candinates: [String]? = nil
         var inputWord: String? = nil
+        var selectedWord: String? = nil
     }
-    let initialState = State()
-    
+        
     /// TODO: Delete return value Optional
     func mutate(action: Action) -> AnyPublisher<Mutation, Never>? {
         switch action {
         case .operationEventKey(.enter):
+            let step: AnyPublisher<Mutation, Never> = Empty()
+                .eraseToAnyPublisher()
             return nil
         case .operationEventKey(.upArrow):
             return nil
@@ -56,14 +58,14 @@ public final class RaelizeIMKReactor {
     func reduce(state: State, mutation: Mutation) -> State {
         var state = state
         switch mutation {
-        case .setIsInputing(let isInputing):
-            state.isInputing = isInputing
         case .setIsCandidatesShowing(let isCandidatesShowing):
             state.isCandidatesShowing = isCandidatesShowing
         case .setCandinates(let candinates):
             state.candinates = candinates
         case .setInputWord(let inputWord):
             state.inputWord = inputWord
+        case .setSlectedWord(let slectedWord):
+            state.selectedWord = slectedWord
         }
         return state
     }
