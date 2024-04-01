@@ -1,5 +1,5 @@
 //
-//  ComposableArchitecture.swift
+//  RaelizeIMKReducer.swift
 //
 //  Created by Tatsumi0000 on 2024/03/28
 //  
@@ -7,12 +7,14 @@
 
 import Foundation
 import AppKit
-import Combine
+import ComposableArchitecture
 
-public final class RaelizeIMKComposableArchitecture {
+@Reducer
+public struct RaelizeIMKReducer {
     
     /// UI state
-    struct State: Sendable {
+    @ObservableState
+    struct State: Equatable {
         var isCandidatesShowing: Bool = false
         var candinates: [String]? = nil
         var inputWord: String? = nil
@@ -20,46 +22,26 @@ public final class RaelizeIMKComposableArchitecture {
     }
     
     /// User action
-    enum Action: Sendable {
+    enum Action {
         /// Operation keys(Enter, Arrow and so on)
         case operationEventKey(NSEvent.SpecialKey)
         /// Typing word
         case inputWord(String?)
     }
     
-        
-    /// TODO: Delete return value Optional
-//    func mutate(action: Action) -> AnyPublisher<Mutation, Never>? {
-//        switch action {
-//        case .operationEventKey(.enter):
-//            let step: AnyPublisher<Mutation, Never> = Empty()
-//                .eraseToAnyPublisher()
-//            return nil
-//        case .operationEventKey(.upArrow):
-//            return nil
-//        case .operationEventKey(.downArrow):
-//            return nil
-//        case .inputWord(let word):
-//            print(word ?? "word is nil.")
-//            return nil
-//        default:
-//            return nil
-//        }
-//    }
-//    
-//    func reduce(state: State, mutation: Mutation) -> State {
-//        var state = state
-//        switch mutation {
-//        case .setIsCandidatesShowing(let isCandidatesShowing):
-//            state.isCandidatesShowing = isCandidatesShowing
-//        case .setCandinates(let candinates):
-//            state.candinates = candinates
-//        case .setInputWord(let inputWord):
-//            state.inputWord = inputWord
-//        case .setSlectedWord(let slectedWord):
-//            state.selectedWord = slectedWord
-//        }
-//        return state
-//    }
-    
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
+        switch action {
+        case .operationEventKey(.enter):
+            return .none
+        case .operationEventKey(.upArrow):
+            return .none
+        case .operationEventKey(.downArrow):
+            return .none
+        case .inputWord(let word):
+            print(word ?? "word is nil.")
+            return .none
+        default:
+            return .none
+        }
+    }
 }
