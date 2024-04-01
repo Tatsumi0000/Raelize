@@ -2,16 +2,16 @@
 //  RaelizeIMKReducer.swift
 //
 //  Created by Tatsumi0000 on 2024/03/28
-//  
+//
 //
 
-import Foundation
 import AppKit
 import ComposableArchitecture
+import Foundation
 
 @Reducer
 public struct RaelizeIMKReducer {
-    
+
     /// UI state
     @ObservableState
     struct State: Equatable {
@@ -20,7 +20,7 @@ public struct RaelizeIMKReducer {
         var inputWord: String? = nil
         var selectedWord: String? = nil
     }
-    
+
     /// User action
     enum Action {
         /// Operation keys(Enter, Arrow and so on)
@@ -28,7 +28,7 @@ public struct RaelizeIMKReducer {
         /// Typing word
         case inputWord(String?)
     }
-    
+
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .operationEventKey(.enter):
