@@ -9,18 +9,15 @@ import Combine
 import Foundation
 
 public protocol WordListFileUseCaseType {
-    /// Want to display word-list
-    var currentWordList: CurrentValueSubject<[String]?, Never> { get }
     func readFile(fileName: String)
     /// Delete word-list to display
     func resetWordList()
     /// Preparing data for search
-    func searchWordList(word: String)
+    func searchWordList(word: String) -> AnyPublisher<[String]?, Never>
 }
 
 final public class WordListFileUseCase: WordListFileUseCaseType {
 
-    public let currentWordList = CurrentValueSubject<[String]?, Never>(nil)
     /// Shared repository instance
     private let provider: RepositoryProviderType
     /// Number of items to candidate
@@ -37,14 +34,13 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
     }
 
     public func resetWordList() {
-        self.currentWordList.value = nil
         self.provider.wordListFileRepository.resetFile()
     }
 
-    public func searchWordList(word: String) {
-        self.provider.wordListFileRepository.getWordList()
+    public func searchWordList(word: String) -> AnyPublisher<[String]?, Never> {
+        return self.provider.wordListFileRepository.getWordList()
             .compactMap({
-                if $0 == nil { self.currentWordList.send(nil) }
+                if $0 == nil { return nil }
                 return $0  // cast non-nil
             })
             .map({ (dicts: [String]) -> [String]? in
@@ -52,10 +48,7 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
                     word: word, candidatesSize: self.candidatesSize, wordList: dicts)
                 return candinates
             })
-            .sink(receiveValue: {
-                self.currentWordList.send($0)
-            })
-            .store(in: &cancellables)
+            .eraseToAnyPublisher()
     }
 }
 
