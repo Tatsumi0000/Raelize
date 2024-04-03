@@ -28,7 +28,7 @@ let package = Package(
             name: "RaelizeLogicTests",
             dependencies: [
                 "RaelizeLogic",
-                .product(name: "Testing", package: "swift-testing")
+                .product(name: "Testing", package: "swift-testing"),
             ]
         ),
     ]
