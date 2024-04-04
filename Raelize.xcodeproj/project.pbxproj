@@ -12,6 +12,8 @@
 		0D28258C2BA73365006EA2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D28258B2BA73365006EA2F6 /* AppDelegate.swift */; };
 		0D28258F2BA73848006EA2F6 /* RaelizeInputMethodKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0D28258E2BA73848006EA2F6 /* RaelizeInputMethodKit */; };
 		0D2825912BA7384C006EA2F6 /* RaelizeLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 0D2825902BA7384C006EA2F6 /* RaelizeLogic */; };
+		0D5B3BBD2BBEF66F00508CF3 /* Testing in Frameworks */ = {isa = PBXBuildFile; productRef = 0D5B3BBC2BBEF66F00508CF3 /* Testing */; };
+		0D5B3BBF2BBEF6A200508CF3 /* Scaffolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5B3BBE2BBEF6A200508CF3 /* Scaffolding.swift */; };
 		0D8440DD2BB2F50F00EF9E85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8440DC2BB2F50F00EF9E85 /* ContentView.swift */; };
 		0D8440DF2BB2F53100EF9E85 /* RaelizeDebugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8440DE2BB2F53100EF9E85 /* RaelizeDebugApp.swift */; };
 		0D8440E12BB2F58B00EF9E85 /* RaelizeLogic in Frameworks */ = {isa = PBXBuildFile; productRef = 0D8440E02BB2F58B00EF9E85 /* RaelizeLogic */; };
@@ -21,10 +23,17 @@
 		B42CBDF22B581260001A789D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBDF12B581260001A789D /* ContentView.swift */; };
 		B42CBDF42B581261001A789D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42CBDF32B581261001A789D /* Assets.xcassets */; };
 		B42CBDF72B581261001A789D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42CBDF62B581261001A789D /* Preview Assets.xcassets */; };
-		B42CBE022B581261001A789D /* RaelizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBE012B581261001A789D /* RaelizeTests.swift */; };
+		B42CBE022B581261001A789D /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42CBE012B581261001A789D /* ContentViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0DDBD2C72BBEE067001FD31E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B42CBDE42B581260001A789D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D0C0CD12BB2C13900FEB7FD;
+			remoteInfo = RaelizeDebug;
+		};
 		B42CBDFE2B581261001A789D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B42CBDE42B581260001A789D /* Project object */;
@@ -48,6 +57,7 @@
 		0D0C0CDD2BB2C13A00FEB7FD /* RaelizeDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaelizeDebug.entitlements; sourceTree = "<group>"; };
 		0D28258A2BA72D31006EA2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0D28258B2BA73365006EA2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D5B3BBE2BBEF6A200508CF3 /* Scaffolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scaffolding.swift; sourceTree = "<group>"; };
 		0D8440DC2BB2F50F00EF9E85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0D8440DE2BB2F53100EF9E85 /* RaelizeDebugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeDebugApp.swift; sourceTree = "<group>"; };
 		0D995B0C2BB41EFB0008B051 /* RaelizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeUITests.swift; sourceTree = "<group>"; };
@@ -60,7 +70,7 @@
 		B42CBDF62B581261001A789D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B42CBDF82B581261001A789D /* Raelize.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Raelize.entitlements; sourceTree = "<group>"; };
 		B42CBDFD2B581261001A789D /* RaelizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaelizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B42CBE012B581261001A789D /* RaelizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeTests.swift; sourceTree = "<group>"; };
+		B42CBE012B581261001A789D /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		B42CBE072B581261001A789D /* RaelizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaelizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43910FF2B58303700ED3080 /* RaelizeLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RaelizeLogic; sourceTree = "<group>"; };
 		B4F303D52B58242E00BB7597 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
@@ -90,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5B3BBD2BBEF66F00508CF3 /* Testing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +199,8 @@
 		B42CBE002B581261001A789D /* RaelizeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B42CBE012B581261001A789D /* RaelizeTests.swift */,
+				B42CBE012B581261001A789D /* ContentViewTests.swift */,
+				0D5B3BBE2BBEF6A200508CF3 /* Scaffolding.swift */,
 			);
 			path = RaelizeTests;
 			sourceTree = "<group>";
@@ -279,6 +291,9 @@
 				B42CBDFF2B581261001A789D /* PBXTargetDependency */,
 			);
 			name = RaelizeTests;
+			packageProductDependencies = (
+				0D5B3BBC2BBEF66F00508CF3 /* Testing */,
+			);
 			productName = VistTests;
 			productReference = B42CBDFD2B581261001A789D /* RaelizeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -295,6 +310,7 @@
 			);
 			dependencies = (
 				B42CBE092B581261001A789D /* PBXTargetDependency */,
+				0DDBD2C82BBEE067001FD31E /* PBXTargetDependency */,
 			);
 			name = RaelizeUITests;
 			productName = VistUITests;
@@ -307,7 +323,7 @@
 		B42CBDE42B581260001A789D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
@@ -339,6 +355,7 @@
 			);
 			mainGroup = B42CBDE32B581260001A789D;
 			packageReferences = (
+				0D5B3BBB2BBEF66F00508CF3 /* XCRemoteSwiftPackageReference "swift-testing" */,
 			);
 			productRefGroup = B42CBDED2B581260001A789D /* Products */;
 			projectDirPath = "";
@@ -411,7 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42CBE022B581261001A789D /* RaelizeTests.swift in Sources */,
+				B42CBE022B581261001A789D /* ContentViewTests.swift in Sources */,
+				0D5B3BBF2BBEF6A200508CF3 /* Scaffolding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +445,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0DDBD2C82BBEE067001FD31E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D0C0CD12BB2C13900FEB7FD /* RaelizeDebug */;
+			targetProxy = 0DDBD2C72BBEE067001FD31E /* PBXContainerItemProxy */;
+		};
 		B42CBDFF2B581261001A789D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B42CBDEB2B581260001A789D /* Raelize */;
@@ -442,19 +465,21 @@
 /* Begin XCBuildConfiguration section */
 		0D0C0CDE2BB2C13A00FEB7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D72B58267900BB7597 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RaelizeDebug/RaelizeDebug.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RaelizeDebug/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -475,19 +500,21 @@
 		};
 		0D0C0CDF2BB2C13A00FEB7FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D62B58265000BB7597 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RaelizeDebug/RaelizeDebug.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RaelizeDebug/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -507,6 +534,7 @@
 		};
 		B42CBE0F2B581261001A789D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D72B58267900BB7597 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -538,9 +566,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -571,6 +601,7 @@
 		};
 		B42CBE102B581261001A789D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D62B58265000BB7597 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -602,9 +633,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -627,17 +660,22 @@
 		};
 		B42CBE122B581261001A789D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D72B58267900BB7597 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Raelize/Raelize.entitlements;
+				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Raelize/Preview Content\"";
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Raelize/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -649,6 +687,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = love.aespa.inputmethod.Raelize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -656,17 +695,22 @@
 		};
 		B42CBE132B581261001A789D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D62B58265000BB7597 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Raelize/Raelize.entitlements;
+				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Raelize/Preview Content\"";
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Raelize/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -685,15 +729,17 @@
 		};
 		B42CBE152B581261001A789D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D72B58267900BB7597 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
@@ -708,15 +754,17 @@
 		};
 		B42CBE162B581261001A789D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D62B58265000BB7597 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
@@ -731,36 +779,44 @@
 		};
 		B42CBE182B581261001A789D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D72B58267900BB7597 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = love.aespa.inputmethod.RaelizeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Vist;
+				TEST_TARGET_NAME = Raelize;
 			};
 			name = Debug;
 		};
 		B42CBE192B581261001A789D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F303D62B58265000BB7597 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = love.aespa.inputmethod.RaelizeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Vist;
+				TEST_TARGET_NAME = Raelize;
 			};
 			name = Release;
 		};
@@ -814,6 +870,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		0D5B3BBB2BBEF66F00508CF3 /* XCRemoteSwiftPackageReference "swift-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		0D28258E2BA73848006EA2F6 /* RaelizeInputMethodKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -822,6 +889,11 @@
 		0D2825902BA7384C006EA2F6 /* RaelizeLogic */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RaelizeLogic;
+		};
+		0D5B3BBC2BBEF66F00508CF3 /* Testing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D5B3BBB2BBEF66F00508CF3 /* XCRemoteSwiftPackageReference "swift-testing" */;
+			productName = Testing;
 		};
 		0D8440E02BB2F58B00EF9E85 /* RaelizeLogic */ = {
 			isa = XCSwiftPackageProductDependency;
