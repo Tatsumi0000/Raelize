@@ -14,6 +14,8 @@ public protocol WordListFileUseCaseType {
     func resetWordList()
     /// Preparing data for search
     func searchWordList(word: String) -> AnyPublisher<[String]?, Never>
+    /// Convert Word to FileName
+    func convertWordToFileName(word: String) -> String
 }
 
 final public class WordListFileUseCase: WordListFileUseCaseType {
@@ -49,6 +51,22 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
                 return candinates
             })
             .eraseToAnyPublisher()
+    }
+
+    public func convertWordToFileName(word: String) -> String {
+        let word = word.lowercased()
+        let startIndex = word.startIndex
+        let startWord = word[startIndex]
+        let fileName: String
+        switch startWord {
+        case "a"..."z":
+            fileName = String(startWord)
+        case "0"..."9":
+            fileName = "0-9"
+        default:
+            fileName = "symbols"
+        }
+        return fileName + ".tsv"
     }
 }
 
