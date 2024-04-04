@@ -21,7 +21,8 @@ struct ContentView: View {
         .onAppear(perform: {
             UseCaseProvider.shared.wordListFileUseCase.readFile(fileName: "a")
 
-            UseCaseProvider.shared.wordListFileUseCase.currentWordList
+            UseCaseProvider.shared.wordListFileUseCase
+                .searchWordList(word: "Test")
                 .compactMap({ $0 })
                 .sink(receiveValue: {
                     print("------sink------")

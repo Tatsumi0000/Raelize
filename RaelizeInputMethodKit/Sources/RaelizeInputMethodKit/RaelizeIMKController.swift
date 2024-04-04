@@ -1,6 +1,7 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
+import ComposableArchitecture
 import Foundation
 import InputMethodKit
 
@@ -8,10 +9,14 @@ import InputMethodKit
 public class RaelizeIMKController: IMKInputController {
 
     private let candidates: IMKCandidates
+    private let store: StoreOf<RaelizeIMKReducer>
 
     public override init!(server: IMKServer!, delegate: Any!, client inputClient: Any!) {
         self.candidates = IMKCandidates(
             server: server, panelType: kIMKSingleColumnScrollingCandidatePanel)
+        self.store = Store(
+            initialState: RaelizeIMKReducer.State(),
+            reducer: { RaelizeIMKReducer() })
         super.init(server: server, delegate: delegate, client: inputClient)
     }
 
