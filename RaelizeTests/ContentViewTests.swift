@@ -1,15 +1,9 @@
-//
-//  RaelizeInputMethodKitTests.swift
-//
-//  Created by Tatsumi0000 on 2024/04/04
-//
-//
-
 import Testing
 
+@testable import Raelize
 @testable import RaelizeInputMethodKit
 
-struct RaelizeInputMethodKitTests {
+struct ContentViewTests {
 
     private let example = true
 
