@@ -1,13 +1,19 @@
-import XCTest
+//
+//  File.swift
+//
+//  Created by Tatsumi0000 on 2024/04/04
+//
+//
+
+import Testing
 
 @testable import RaelizeInputMethodKit
 
-final class RaelizeInputMethodKitTests: XCTestCase {
-    func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
+struct RaelizeInputMethodKitTests {
 
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+    private let example = true
+
+    @Test func sample() {
+        #expect(self.example == true)
     }
 }
