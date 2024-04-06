@@ -66,7 +66,7 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
         default:
             fileName = "symbols"
         }
-        return fileName + ".tsv"
+        return fileName
     }
 }
 

@@ -19,13 +19,13 @@ struct WordListFileUseCaseTests {
         }
         typealias TestCase = (word: String, fileName: String, sourceLocation: SourceLocation)
         static let testCases: [TestCase] = [
-            (word: "apple", fileName: "a.tsv", sourceLocation: SourceLocation()),
-            (word: "Buzy", fileName: "b.tsv", sourceLocation: SourceLocation()),
-            (word: "zz", fileName: "z.tsv", sourceLocation: SourceLocation()),
-            (word: "001CB", fileName: "0-9.tsv", sourceLocation: SourceLocation()),
-            (word: "999scd", fileName: "0-9.tsv", sourceLocation: SourceLocation()),
-            (word: "&&&", fileName: "symbols.tsv", sourceLocation: SourceLocation()),
-            (word: "**ac0CC", fileName: "symbols.tsv", sourceLocation: SourceLocation()),
+            (word: "apple", fileName: "a", sourceLocation: SourceLocation()),
+            (word: "Buzy", fileName: "b", sourceLocation: SourceLocation()),
+            (word: "zz", fileName: "z", sourceLocation: SourceLocation()),
+            (word: "001CB", fileName: "0-9", sourceLocation: SourceLocation()),
+            (word: "999scd", fileName: "0-9", sourceLocation: SourceLocation()),
+            (word: "&&&", fileName: "symbols", sourceLocation: SourceLocation()),
+            (word: "**ac0CC", fileName: "symbols", sourceLocation: SourceLocation()),
         ]
         @Test(arguments: Self.testCases)
         func convertWordToFileName(testCase: TestCase) {
