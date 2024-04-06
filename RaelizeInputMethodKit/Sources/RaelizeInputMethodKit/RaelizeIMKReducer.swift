@@ -19,10 +19,10 @@ public struct RaelizeIMKReducer {
     /// UI state
     @ObservableState
     public struct State: Equatable {
-        var isCandidatesShowing: Bool = false
         var candinates: [String] = []
-        var inputWord: String? = nil
-        var selectedWord: String? = nil
+        var inputWord: String = ""
+        var fileName: String = ""
+        var insertText: String = ""
     }
 
     /// User action
@@ -30,9 +30,11 @@ public struct RaelizeIMKReducer {
         /// Operation keys(Enter, Arrow and so on)
         case operationEventKey(NSEvent.SpecialKey)
         /// Typing word
-        case inputWord(String?)
+        case inputWord(String)
         /// Searched word
         case checkWord([String]?)
+        /// selected word
+        case insertText(String)
     }
 
     public func reduce(into state: inout State, action: Action) -> Effect<Action> {
@@ -41,20 +43,35 @@ public struct RaelizeIMKReducer {
             return .none
         case .operationEventKey(.upArrow):
             return .none
-        case .operationEventKey(.downArrow):
+        case .operationEventKey(.downArrow), .operationEventKey(.tab):
+            return .none
+        case .operationEventKey(.backspace):
+            state.inputWord.removeLast()
+            let word = state.inputWord
+            return .publisher({
+                provider.searchWordList(word: word)
+                    .map({ Action.checkWord($0) })
+            })
+        case .insertText(let text):
+            state.insertText = text
             return .none
         case .inputWord(let word):
-            print(word ?? "word is nil.")
-            state.inputWord = word
+            state.inputWord += word
+            let fileName = provider.convertWordToFileName(word: state.inputWord)
+            if state.fileName != fileName {
+                state.fileName = fileName
+                NSLog("🛠️\(state.fileName)")
+                provider.readFile(fileName: state.fileName)
+            }
+            NSLog("🛠️\(state.inputWord)")
+            let word = state.inputWord
             return .publisher({
-                provider.searchWordList(word: "")
+                provider.searchWordList(word: word)
                     .map({ Action.checkWord($0) })
             })
         case .checkWord(let words):
             guard let words = words else {
-                state.isCandidatesShowing = false
                 state.candinates = []
-                state.selectedWord = nil
                 return .none
             }
             state.candinates = words
