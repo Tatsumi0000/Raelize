@@ -28,10 +28,12 @@ final class WordListFileRepository: WordListFileRepositoryType {
                 forResource: "Resources/dicts/" + fileName, withExtension: "tsv"),
             let data = try? String(contentsOf: fileUrl)
         else {
+            NSLog("🛠️self.wordListInFile.send")
             self.wordListInFile.send(nil)
             return
         }
         let splittedData = data.components(separatedBy: .newlines).filter({ !$0.isEmpty })
+        NSLog("🛠️\(splittedData.first)")
         self.wordListInFile.send(splittedData)
     }
 

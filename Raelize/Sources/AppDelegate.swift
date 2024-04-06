@@ -17,6 +17,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         server = IMKServer(
             name: Bundle.main.infoDictionary?["InputMethodConnectionName"] as? String,
             bundleIdentifier: Bundle.main.bundleIdentifier)
-        NSLog("setup")
+        NSLog("🛠️setup")
     }
 }
