@@ -9,19 +9,20 @@ import InputMethodKit
 public class RaelizeIMKController: IMKInputController {
 
     private let candidates: IMKCandidates
-    private let store: StoreOf<RaelizeIMKReducer> = Store(
-        initialState: RaelizeIMKReducer.State(),
-        reducer: { RaelizeIMKReducer() })
+    private let store: StoreOf<RaelizeIMKReducer>
 
     public override init!(server: IMKServer!, delegate: Any!, client inputClient: Any!) {
         self.candidates = IMKCandidates(
             server: server, panelType: kIMKSingleColumnScrollingCandidatePanel)
+        self.store = Store(
+            initialState: RaelizeIMKReducer.State(),
+            reducer: { RaelizeIMKReducer() })
+
         super.init(server: server, delegate: delegate, client: inputClient)
         NSLog("🛠️setup")
         guard let client = inputClient as? IMKTextInput else {
             return
         }
-
         let notFound = NSRange(location: NSNotFound, length: NSNotFound)
 
         observe {
@@ -33,23 +34,24 @@ public class RaelizeIMKController: IMKInputController {
             }
             client.insertText(self.store.insertText, replacementRange: notFound)
             client.setMarkedText(
-                self.store.inputWord, selectionRange: notFound, replacementRange: notFound)
+                self.store.inputWord,
+                selectionRange: NSRange(location: self.store.inputWord.count, length: 0),
+                replacementRange: notFound)
+            self.candidates.interpretKeyEvents([self.store.candidateEvent])
         }
     }
 
     public override func handle(_ event: NSEvent!, client sender: Any!) -> Bool {
         NSLog("🛠️handle")
-        if let specialKey = event.specialKey {
-            self.store.send(.operationEventKey(specialKey))
+        if let _ = event.specialKey {
+            self.store.send(.operationEventKey(event))
             return false
         }
         if let text = event.characters, isPrintable(text) {
             self.store.send(.inputWord(text))
-            NSLog("🛠️--if let--")
-            NSLog("🛠️\(text)")
             return true
         }
-        return true
+        return false
     }
 
     public override func candidates(_ sender: Any!) -> [Any]! {

@@ -23,12 +23,13 @@ public struct RaelizeIMKReducer {
         var inputWord: String = ""
         var fileName: String = ""
         var insertText: String = ""
+        var candidateEvent: NSEvent = NSEvent()
     }
 
     /// User action
     public enum Action {
         /// Operation keys(Enter, Arrow and so on)
-        case operationEventKey(NSEvent.SpecialKey)
+        case operationEventKey(NSEvent)
         /// Typing word
         case inputWord(String)
         /// Searched word
@@ -39,24 +40,28 @@ public struct RaelizeIMKReducer {
 
     public func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
-        case .operationEventKey(.enter):
-            return .none
-        case .operationEventKey(.upArrow):
-            return .none
-        case .operationEventKey(.downArrow), .operationEventKey(.tab):
-            return .none
-        case .operationEventKey(.backspace):
-            state.inputWord.removeLast()
-            let word = state.inputWord
-            return .publisher({
-                provider.searchWordList(word: word)
-                    .map({ Action.checkWord($0) })
-            })
+        case .operationEventKey(let event):
+            switch event.specialKey {
+            case .enter, .upArrow, .downArrow, .tab:
+                state.candidateEvent = event
+                return .none
+            case .backspace:
+                state.inputWord.removeLast()
+                let word = state.inputWord
+                return .publisher({
+                    provider.searchWordList(word: word)
+                        .map({ Action.checkWord($0) })
+                })
+            default:
+                return .none
+            }
         case .insertText(let text):
             state.insertText = text
             return .none
         case .inputWord(let word):
             state.inputWord += word
+            NSLog("word\(word)")
+            NSLog("state.inputWord\(state.inputWord)")
             let fileName = provider.convertWordToFileName(word: state.inputWord)
             if state.fileName != fileName {
                 state.fileName = fileName
@@ -75,8 +80,6 @@ public struct RaelizeIMKReducer {
                 return .none
             }
             state.candinates = words
-            return .none
-        default:
             return .none
         }
     }

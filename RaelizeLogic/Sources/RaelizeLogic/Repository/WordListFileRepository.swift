@@ -33,7 +33,7 @@ final class WordListFileRepository: WordListFileRepositoryType {
             return
         }
         let splittedData = data.components(separatedBy: .newlines).filter({ !$0.isEmpty })
-        NSLog("🛠️\(splittedData.first)")
+        NSLog("🛠️\(String(describing: splittedData.first))")
         self.wordListInFile.send(splittedData)
     }
 
