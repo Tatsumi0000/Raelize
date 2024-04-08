@@ -35,7 +35,6 @@ public class RaelizeIMKController: IMKInputController {
         }
         observe {
             client.insertText(self.store.insertText, replacementRange: notFound)
-            //            self.store.send(.inputWord("")) reset word
         }
         observe {
             client.setMarkedText(

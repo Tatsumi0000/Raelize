@@ -34,9 +34,10 @@ public struct RaelizeIMKReducer {
         case inputWord(String)
         /// Searched word
         case checkWord([String]?)
-        /// selected word
+        /// Selected word
         case insertText(String)
-        ///
+        /// Reset current state
+        case resetState
     }
 
     public func reduce(into state: inout State, action: Action) -> Effect<Action> {
@@ -58,8 +59,9 @@ public struct RaelizeIMKReducer {
             }
         case .insertText(let text):
             state.insertText = text
-            state.candinates = []
-            return .none
+            return .run(operation: { send in
+                await send(.resetState)
+            })
         case .inputWord(let word):
             state.inputWord += word
             NSLog("word\(word)")
@@ -83,6 +85,10 @@ public struct RaelizeIMKReducer {
             }
             state.candinates = words
             return .none
+        case .resetState:
+            state = State()
+            return .none
         }
+
     }
 }
