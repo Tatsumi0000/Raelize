@@ -10,6 +10,20 @@ import Foundation
 import InputMethodKit
 import RaelizeInputMethodKit
 
+class NSManualApplication: NSApplication {
+    let appDelegate = AppDelegate()
+
+    override init() {
+        super.init()
+        self.delegate = appDelegate
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+@main
 class AppDelegate: NSObject, NSApplicationDelegate {
     var server = IMKServer()
 

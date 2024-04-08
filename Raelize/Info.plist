@@ -8,6 +8,8 @@
 	<string>RaelizeIMKController</string>
 	<key>LSBackgroundOnly</key>
 	<true/>
+	<key>NSPrincipalClass</key>
+	<string>$(PRODUCT_MODULE_NAME).NSManualApplication</string>
 	<key>tsInputMethodCharacterRepertoireKey</key>
 	<array>
 		<string>Latn</string>
