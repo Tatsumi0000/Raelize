@@ -32,17 +32,28 @@ public class RaelizeIMKController: IMKInputController {
                 self.candidates.update()
                 self.candidates.show()
             }
+        }
+        observe {
             client.insertText(self.store.insertText, replacementRange: notFound)
+            //            self.store.send(.inputWord("")) reset word
+        }
+        observe {
             client.setMarkedText(
                 self.store.inputWord,
                 selectionRange: NSRange(location: self.store.inputWord.count, length: 0),
                 replacementRange: notFound)
-            self.candidates.interpretKeyEvents([self.store.candidateEvent])
+        }
+        observe {
+            if let candidateEvent = self.store.candidateEvent {
+                self.candidates.interpretKeyEvents([candidateEvent])
+            }
         }
     }
 
     public override func handle(_ event: NSEvent!, client sender: Any!) -> Bool {
         NSLog("🛠️handle")
+        guard let event = event else { return false }
+
         if let _ = event.specialKey {
             self.store.send(.operationEventKey(event))
             return false
@@ -63,11 +74,15 @@ public class RaelizeIMKController: IMKInputController {
     public override func candidateSelected(_ candidateString: NSAttributedString!) {
         NSLog("---candidateSelected---")
         NSLog("🛠️\(candidateString.string)")
-        self.store.send(.inputWord(candidateString.string))
+        self.store.send(.insertText(candidateString.string))
     }
 
     public override func deactivateServer(_ sender: Any) {
         self.candidates.hide()
+    }
+
+    public override func candidateSelectionChanged(_ candidateString: NSAttributedString!) {
+        NSLog("🛠️candidateSelectionChanged: %@", "\(candidateString)")
     }
 
     func isPrintable(_ text: String) -> Bool {

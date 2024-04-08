@@ -23,7 +23,7 @@ public struct RaelizeIMKReducer {
         var inputWord: String = ""
         var fileName: String = ""
         var insertText: String = ""
-        var candidateEvent: NSEvent = NSEvent()
+        var candidateEvent: NSEvent? = nil
     }
 
     /// User action
@@ -36,6 +36,7 @@ public struct RaelizeIMKReducer {
         case checkWord([String]?)
         /// selected word
         case insertText(String)
+        ///
     }
 
     public func reduce(into state: inout State, action: Action) -> Effect<Action> {
@@ -57,6 +58,7 @@ public struct RaelizeIMKReducer {
             }
         case .insertText(let text):
             state.insertText = text
+            state.candinates = []
             return .none
         case .inputWord(let word):
             state.inputWord += word
