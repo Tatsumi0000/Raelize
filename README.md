@@ -1,12 +1,12 @@
 # Raelize
 
-Raelize is macOS IME tool for English.
+Raelize is macOS IME tool for English. This is a coined word combining realize(気付く), æ, and aspect(両面) 🫰
+
 
 <p align="center">
 <img src="./img/img0.gif" width="650" alt="">
 </p>
 
-Raelize is a coined word combining realize(気付く), æ, and aspect(両面) 🫰
 
 # How to use?
 
