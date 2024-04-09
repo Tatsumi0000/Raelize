@@ -19,10 +19,17 @@ public struct RaelizeIMKReducer {
     /// UI state
     @ObservableState
     public struct State: Equatable {
+        /// Candinates list
         var candinates: [String] = []
+        /// Typing word
         var inputWord: String = ""
+        /// Current open file
         var fileName: String = ""
+        /// Decision word
         var insertText: String = ""
+        /// Selected word on candinates
+        var selectedWord: String = ""
+        /// Candinate event
         var candidateEvent: NSEvent? = nil
     }
 
@@ -34,8 +41,10 @@ public struct RaelizeIMKReducer {
         case inputWord(String)
         /// Searched word
         case checkWord([String]?)
-        /// Selected word
+        /// Decision word
         case insertText(String)
+        /// Selected word
+        case selectedWord(String)
         /// Reset current state
         case resetState
     }
@@ -44,7 +53,12 @@ public struct RaelizeIMKReducer {
         switch action {
         case .operationEventKey(let event):
             switch event.specialKey {
-            case .enter, .upArrow, .downArrow, .tab:
+            case .enter:
+                let text = state.selectedWord
+                return .run(operation: { send in
+                    await send(.insertText(text))
+                })
+            case .upArrow, .downArrow, .tab:
                 state.candidateEvent = event
                 return .none
             case .backspace:
@@ -85,7 +99,11 @@ public struct RaelizeIMKReducer {
             }
             state.candinates = words
             return .none
+        case .selectedWord(let word):
+            state.selectedWord = word
+            return .none
         case .resetState:
+            provider.resetWordList()
             state = State()
             return .none
         }

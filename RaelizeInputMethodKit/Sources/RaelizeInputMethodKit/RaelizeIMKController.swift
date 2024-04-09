@@ -76,12 +76,16 @@ public class RaelizeIMKController: IMKInputController {
         self.store.send(.insertText(candidateString.string))
     }
 
-    public override func deactivateServer(_ sender: Any) {
-        self.candidates.hide()
+    public override func candidateSelectionChanged(_ candidateString: NSAttributedString!) {
+        guard let candidateString = candidateString else { return }
+
+        NSLog("🛠️candidateSelectionChanged: %@", "\(candidateString)")
+        self.store.send(.selectedWord(candidateString.string))
     }
 
-    public override func candidateSelectionChanged(_ candidateString: NSAttributedString!) {
-        NSLog("🛠️candidateSelectionChanged: %@", "\(candidateString)")
+    public override func deactivateServer(_ sender: Any) {
+        self.candidates.hide()
+        self.store.send(.resetState)
     }
 
     func isPrintable(_ text: String) -> Bool {
