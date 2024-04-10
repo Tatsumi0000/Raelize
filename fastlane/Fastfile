@@ -23,6 +23,7 @@ platform :mac do
     configuration: "Debug",
     export_method: "development",
     scheme: "Raelize",
+    output_directory: "build",
     clean: true
     )
   end
