@@ -5,7 +5,7 @@ platform :mac do
   lane :app_build do
   ime_path = "/Library/Input Methods"
 
-    build_app(
+    build_mac_app(
     configuration: "Debug",
     export_method: "development",
     scheme: "Raelize",
