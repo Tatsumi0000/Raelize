@@ -13,6 +13,6 @@ platform :mac do
     clean: true
     )
 
-    # sh("cp", "-r", "#{output_directory}/Raelize.app", "#{ENV["HOME"]}", "#{ime_path}")
+    sh("pkill", "Raelize")
   end
 end

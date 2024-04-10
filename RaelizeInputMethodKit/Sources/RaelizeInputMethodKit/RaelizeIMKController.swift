@@ -19,7 +19,7 @@ public class RaelizeIMKController: IMKInputController {
             reducer: { RaelizeIMKReducer() })
 
         super.init(server: server, delegate: delegate, client: inputClient)
-        NSLog("🛠️setup")
+        NSLog("🛠️setup🛠️")
         guard let client = inputClient as? IMKTextInput else {
             return
         }
