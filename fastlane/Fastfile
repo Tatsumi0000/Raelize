@@ -1,30 +1,18 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
-
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
 default_platform(:mac)
 
 platform :mac do
   desc "Build macOS App"
   lane :app_build do
-    # add actions here: https://docs.fastlane.tools/actions
+  ime_path = "/Library/Input Methods"
+
     build_app(
     configuration: "Debug",
     export_method: "development",
     scheme: "Raelize",
-    output_directory: "build",
+    output_directory: "#{ENV["HOME"]}#{ime_path}",
     clean: true
     )
+
+    # sh("cp", "-r", "#{output_directory}/Raelize.app", "#{ENV["HOME"]}", "#{ime_path}")
   end
 end
