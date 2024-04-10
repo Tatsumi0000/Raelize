@@ -12,6 +12,16 @@ Raelize is macOS IME tool for English. This is a coined word combining realize(æ
 
 **There are a lot of bugs, so be careful!**
 
+## Use fastlane
+After executing the following command, try from step 3.
+
+```sh
+bundle install
+bundle exec fastlane app_build
+```
+
+## Manual(operation)
+
 1. Build with Xcode.
 2. Copy Raelize.app to `~/Library/Input\ Methods/`.
 3. Open macOS preferences and add Raelize as an input source.
