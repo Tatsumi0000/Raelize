@@ -13,11 +13,17 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-default_platform(:ios)
+default_platform(:mac)
 
-platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
+platform :mac do
+  desc "Build macOS App"
+  lane :app_build do
     # add actions here: https://docs.fastlane.tools/actions
+    build_app(
+    configuration: "Debug",
+    export_method: "development",
+    scheme: "Raelize",
+    clean: true
+    )
   end
 end
