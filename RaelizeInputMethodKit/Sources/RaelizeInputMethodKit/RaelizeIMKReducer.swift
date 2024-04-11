@@ -52,9 +52,12 @@ public struct RaelizeIMKReducer {
     public func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .operationEventKey(let event):
-            switch event.specialKey {
+            let keyEvent = KeyEvent(keyCode: Int(event.keyCode))
+
+            switch keyEvent.eventName {
             case .enter:
                 let text = state.selectedWord
+                NSLog("enter")
                 return .run(operation: { send in
                     await send(.insertText(text))
                 })
@@ -73,6 +76,7 @@ public struct RaelizeIMKReducer {
             }
         case .insertText(let text):
             state.insertText = text
+            NSLog("insertText is [\(state.insertText)].")
             return .run(operation: { send in
                 await send(.resetState)
             })
