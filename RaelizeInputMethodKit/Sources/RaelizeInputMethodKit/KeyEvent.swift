@@ -7,12 +7,17 @@
 
 import Foundation
 
-/// NSEvent.keyCode -> Custom Event
+/// Use NSEvent.KeyCode for clarity enum.
+/// NSEvent.keyCode ->  clarity keyevent name
 /// keyCode List https://boredzo.org/blog/archives/2007-05-22/virtual-key-codes
 public struct KeyEvent {
 
     /// NSEvent.keyCode
-    public let keyCode: Int
+    private let keyCode: Int
+
+    public init(keyCode: Int) {
+        self.keyCode = keyCode
+    }
 
     /// NSEvent.keyCode's name
     public enum CodeConverter: Int {
