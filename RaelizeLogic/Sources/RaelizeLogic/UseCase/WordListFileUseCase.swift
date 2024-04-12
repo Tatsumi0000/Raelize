@@ -40,6 +40,7 @@ final public class WordListFileUseCase: WordListFileUseCaseType {
     }
 
     public func searchWordList(word: String) -> AnyPublisher<[String]?, Never> {
+        let word = word.lowercased()
         return self.provider.wordListFileRepository.getWordList()
             .compactMap({
                 if $0 == nil { return nil }
