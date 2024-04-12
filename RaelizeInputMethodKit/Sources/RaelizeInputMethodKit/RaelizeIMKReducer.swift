@@ -86,7 +86,7 @@ public struct RaelizeIMKReducer {
             state.insertText = text
             NSLog("insertText is [\(state.insertText)].")
             return .run(operation: { send in
-                await send(.resetState(.inputMode))
+                await send(.resetState(.neutralMode))
             })
         case .inputWord(let word):
             state.raelizeState = .inputMode
