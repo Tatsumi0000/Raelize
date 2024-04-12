@@ -15,7 +15,7 @@ public class RaelizeIMKController: IMKInputController {
         self.candidates = IMKCandidates(
             server: server, panelType: kIMKSingleColumnScrollingCandidatePanel)
         self.store = Store(
-            initialState: RaelizeIMKReducer.State(),
+            initialState: RaelizeIMKReducer.State(raelizeState: .inputMode),
             reducer: { RaelizeIMKReducer() })
 
         super.init(server: server, delegate: delegate, client: inputClient)
@@ -26,7 +26,7 @@ public class RaelizeIMKController: IMKInputController {
         let notFound = NSRange(location: NSNotFound, length: NSNotFound)
 
         observe {
-            if self.store.candinates.isEmpty {
+            if self.store.candinates.isEmpty || self.store.inputWord.isEmpty {
                 self.candidates.hide()
             } else {
                 self.candidates.update()
@@ -34,7 +34,9 @@ public class RaelizeIMKController: IMKInputController {
             }
         }
         observe {
-            client.insertText(self.store.insertText, replacementRange: notFound)
+            client.insertText(
+                self.store.insertText,
+                replacementRange: NSRange(location: self.store.insertText.count, length: 0))
         }
         observe {
             client.setMarkedText(
@@ -53,15 +55,16 @@ public class RaelizeIMKController: IMKInputController {
         NSLog("🛠️handle")
         guard let event = event else { return false }
 
-        if let _ = event.specialKey {
-            self.store.send(.operationEventKey(event))
+        self.store.send(.handleRaelizeState(event))
+
+        switch self.store.raelizeState {
+        case .neutralMode:
             return false
-        }
-        if let text = event.characters, isPrintable(text) {
-            self.store.send(.inputWord(text))
+        case .inputMode:
+            return true
+        case .operationMode:
             return true
         }
-        return false
     }
 
     public override func candidates(_ sender: Any!) -> [Any]! {
@@ -85,16 +88,6 @@ public class RaelizeIMKController: IMKInputController {
 
     public override func deactivateServer(_ sender: Any) {
         self.candidates.hide()
-        self.store.send(.resetState)
-    }
-
-    func isPrintable(_ text: String) -> Bool {
-        let printable = [
-            CharacterSet.alphanumerics,
-            CharacterSet.symbols,
-            CharacterSet.punctuationCharacters,
-        ]
-        .reduce(CharacterSet(), { $0.union($1) })
-        return !text.unicodeScalars.contains(where: { !printable.contains($0) })
+        self.store.send(.resetState(.neutralMode))
     }
 }
