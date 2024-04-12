@@ -10,6 +10,7 @@ import Foundation
 /// Use NSEvent.KeyCode for clarity enum.
 /// NSEvent.keyCode ->  clarity keyevent name
 /// keyCode List https://boredzo.org/blog/archives/2007-05-22/virtual-key-codes
+/// https://stackoverflow.com/questions/2080312/where-can-i-find-a-list-of-key-codes-for-use-with-cocoas-nsevent-class
 public struct KeyEvent {
 
     /// NSEvent.keyCode
