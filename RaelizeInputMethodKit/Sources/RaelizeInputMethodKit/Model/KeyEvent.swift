@@ -21,7 +21,7 @@ public struct KeyEvent {
     }
 
     /// NSEvent.keyCode's name
-    public enum CodeConverter: Int {
+    public enum EventName: Int {
         case enter = 36
         case backspace = 51
         case upArrow = 126
@@ -31,7 +31,7 @@ public struct KeyEvent {
     }
 
     /// keyCode -> key name
-    public var eventName: CodeConverter {
-        return CodeConverter(rawValue: keyCode) ?? .undifined
+    public var eventName: EventName {
+        return EventName(rawValue: keyCode) ?? .undifined
     }
 }
