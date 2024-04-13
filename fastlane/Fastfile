@@ -1,10 +1,10 @@
 default_platform(:mac)
 
 platform :mac do
+
   desc "Build macOS App"
   lane :app_build do
   ime_path = "/Library/Input Methods"
-
     build_mac_app(
     configuration: "Debug",
     export_method: "development",
@@ -12,7 +12,16 @@ platform :mac do
     output_directory: "#{ENV["HOME"]}#{ime_path}",
     clean: true
     )
-
     sh("pkill", "Raelize")
   end
+
+  desc "Run all unit tests"
+  lane :tests do
+  run_tests(
+    project: "Raelize.xcodeproj",
+    scheme: "Raelize",
+    testplan: "Raelize"
+    )
+  end
+
 end

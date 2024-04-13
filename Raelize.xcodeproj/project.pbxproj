@@ -57,6 +57,7 @@
 		0D0C0CDD2BB2C13A00FEB7FD /* RaelizeDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaelizeDebug.entitlements; sourceTree = "<group>"; };
 		0D28258A2BA72D31006EA2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0D28258B2BA73365006EA2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D54353E2BCA748300F2E82D /* Raelize.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Raelize.xctestplan; sourceTree = "<group>"; };
 		0D5B3BBE2BBEF6A200508CF3 /* Scaffolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scaffolding.swift; sourceTree = "<group>"; };
 		0D8440DC2BB2F50F00EF9E85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0D8440DE2BB2F53100EF9E85 /* RaelizeDebugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaelizeDebugApp.swift; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 		B42CBDE32B581260001A789D = {
 			isa = PBXGroup;
 			children = (
+				0D54353E2BCA748300F2E82D /* Raelize.xctestplan */,
 				B4F303D62B58265000BB7597 /* Release.xcconfig */,
 				B4F303D72B58267900BB7597 /* Debug.xcconfig */,
 				B4F303D52B58242E00BB7597 /* Signing.xcconfig */,
