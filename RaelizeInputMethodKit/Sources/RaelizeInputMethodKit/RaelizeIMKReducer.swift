@@ -49,7 +49,8 @@ public struct RaelizeIMKReducer {
         case selectedWord(String)
         /// Reset current state
         case resetState(RaelizeState)
-
+        /// Only called by IMKInputController.handle method.
+        /// Update RaelizeState
         case handleRaelizeState(NSEvent)
     }
 
