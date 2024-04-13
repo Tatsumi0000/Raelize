@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum RaelizeState {
+public enum RaelizeState: CaseIterable {
     case neutralMode
     case inputMode
     case operationMode
