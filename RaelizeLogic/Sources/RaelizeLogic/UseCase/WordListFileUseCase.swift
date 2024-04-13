@@ -81,13 +81,13 @@ extension WordListFileUseCaseType {
     /// - Returns: Array from the point containing the prefix specified by word to the point specified by candidatesSize
     func binarySearch(word: String, candidatesSize: Int, wordList: [String]) -> [String]? {
         var left = 0
-        var right = wordList.count - 1
+        var right = wordList.endIndex
         while left <= right {
             let middle = (left + right) / 2
 
             if wordList[middle].lowercased().hasPrefix(word) {
                 var lastIndex = middle + candidatesSize
-                lastIndex = wordList.count - 1 > lastIndex ? lastIndex : middle  // check out of range
+                lastIndex = wordList.endIndex > lastIndex ? lastIndex : middle  // check out of range
                 return Array(wordList[middle...lastIndex])
             } else if wordList[middle] < word {
                 left = middle + 1
