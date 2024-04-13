@@ -14,7 +14,7 @@ import RaelizeLogic
 @Reducer
 public struct RaelizeIMKReducer {
 
-    private let provider = UseCaseProvider.shared.wordListFileUseCase
+    @Dependency(\.wordListFileUseCase) var wordListFileUseCase
 
     /// UI state
     @ObservableState
@@ -75,7 +75,7 @@ public struct RaelizeIMKReducer {
                 state.inputWord.removeLast()
                 let word = state.inputWord
                 return .publisher({
-                    provider.searchWordList(word: word)
+                    wordListFileUseCase.searchWordList(word: word)
                         .map({ Action.checkWord($0) })
                 })
             default:
@@ -93,11 +93,11 @@ public struct RaelizeIMKReducer {
             state.inputWord += word
             NSLog("word\(word)")
             NSLog("state.inputWord\(state.inputWord)")
-            let fileName = provider.convertWordToFileName(word: state.inputWord)
+            let fileName = wordListFileUseCase.convertWordToFileName(word: state.inputWord)
             if state.fileName != fileName {
                 state.fileName = fileName
                 NSLog("🛠️\(state.fileName)")
-                provider.readFile(fileName: state.fileName)
+                wordListFileUseCase.readFile(fileName: state.fileName)
             }
             NSLog("🛠️\(state.inputWord)")
             let word = state.inputWord
@@ -107,7 +107,7 @@ public struct RaelizeIMKReducer {
                 })
             }
             return .publisher({
-                provider.searchWordList(word: word)
+                wordListFileUseCase.searchWordList(word: word)
                     .map({ Action.checkWord($0) })
             })
         case .checkWord(let words):
@@ -122,7 +122,7 @@ public struct RaelizeIMKReducer {
             state.selectedWord = word
             return .none
         case .resetState(let raelizeState):
-            provider.resetWordList()
+            wordListFileUseCase.resetWordList()
             state = State(raelizeState: raelizeState)
             return .none
         case .handleRaelizeState(let event):
