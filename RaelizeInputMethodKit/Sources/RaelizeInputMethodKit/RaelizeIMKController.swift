@@ -60,9 +60,7 @@ public class RaelizeIMKController: IMKInputController {
         switch self.store.raelizeState {
         case .neutralMode:
             return false
-        case .inputMode:
-            return true
-        case .operationMode:
+        case .inputMode, .operationMode:
             return true
         }
     }
