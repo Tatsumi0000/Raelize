@@ -14,7 +14,8 @@ import RaelizeLogic
 @Reducer
 public struct RaelizeIMKReducer {
 
-    @Dependency(\.wordListFileUseCase) var wordListFileUseCase
+    @Dependency(\.wordListFileUseCase)
+    private var wordListFileUseCase
 
     /// UI state
     @ObservableState
