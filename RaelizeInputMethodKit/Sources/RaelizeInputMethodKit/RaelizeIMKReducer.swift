@@ -37,7 +37,7 @@ public struct RaelizeIMKReducer {
     }
 
     /// User action
-    public enum Action {
+    public enum Action: Equatable {
         /// Operation keys(Enter, Arrow and so on)
         case operationEventKey(NSEvent)
         /// Typing word
@@ -63,7 +63,6 @@ public struct RaelizeIMKReducer {
             switch keyEvent.eventName {
             case .enter:
                 let text = state.candinates.isEmpty ? state.inputWord : state.selectedWord
-                NSLog("enter")
                 if text.isEmpty {
                     return .send(.resetState(.neutralMode))
                 }
