@@ -43,7 +43,7 @@ public struct RaelizeIMKReducer {
         /// Typing word
         case inputWord(String)
         /// Searched word
-        case checkWord([String]?)
+        case candinates([String]?)
         /// Decision word
         case insertText(String)
         /// Selected word
@@ -77,7 +77,7 @@ public struct RaelizeIMKReducer {
                 let word = state.inputWord
                 return .publisher({
                     wordListFileUseCase.searchWordList(word: word)
-                        .map({ Action.checkWord($0) })
+                        .map({ Action.candinates($0) })
                 })
             default:
                 return .none
@@ -109,14 +109,14 @@ public struct RaelizeIMKReducer {
             }
             return .publisher({
                 wordListFileUseCase.searchWordList(word: word)
-                    .map({ Action.checkWord($0) })
+                    .map({ Action.candinates($0) })
             })
-        case .checkWord(let words):
-            guard let words = words else {
+        case .candinates(let candinates):
+            guard let candinates = candinates else {
                 state.candinates = []
                 return .none
             }
-            state.candinates = words
+            state.candinates = candinates
             return .none
         case .selectedWord(let word):
             state.raelizeState = .operationMode
