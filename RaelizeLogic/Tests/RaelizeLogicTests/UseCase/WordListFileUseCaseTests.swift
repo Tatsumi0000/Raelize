@@ -37,4 +37,13 @@ struct WordListFileUseCaseTests {
                         word: wordToFileName.word), sourceLocation: testCase.sourceLocation)
         }
     }
+
+    func binarySearch() {
+        let useCase = UseCaseProvider.shared.wordListFileUseCase
+        let wordList = (0...9).map({ "test" + String($0) })
+        let word = "test2"
+        let expected = ["test2", "test3"]
+        let words = useCase.binarySearch(word: word, candidatesSize: 2, wordList: wordList)
+        #expect(words == expected)
+    }
 }
