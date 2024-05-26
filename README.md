@@ -1,4 +1,5 @@
 # Raelize
+[Click here to read the commentary article(JP).](https://blog.aespa.love/developed-english-ime-raelize-runs-on-mac)
 
 Raelize is macOS IME tool for English. This is a coined word combining realize(気付く), æ, and aspect(両面) 🫰
 
